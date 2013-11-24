@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .row
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+      button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='ul.nav.navbar-nav')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      ul.nav.navbar-nav.collapse.navbar-collapse
+        li
+          a(href='#') What is this?
+        li
+          a(href='#') Privacy Policy
+        li
+          a(href='#') Get in touch
+
+  .container.col-sm-12
+    table.centered
+      tbody
+        tr
+          td.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-sm-12.col-xs-12
+            form#intro-form.form-inline.jumbotron(role='form')
+              .form-group.col-xs-12
+                label.col-lg-4.col-md-5.col-sm-6.h1.
+                  #{imhappyfor}
+
+                .col-lg-5.col-md-5.col-sm-4
+                  input.intro-input.col-xs-12.form-control(placeholder='Eg. My family')
+
+                .col-lg-3.col-md-2.col-sm-2
+                  input.intro-button.col-xs-12.btn.btn-success(type='submit' value='send')
+
+              .row
+                p.text-center.people-already-anwser 1300 people already anwser what they are happy for

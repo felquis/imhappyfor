@@ -1,0 +1,43 @@
+body, html, table, .container {
+  height: 100%;
+}
+
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: relative;
+  }
+
+  body, html, table, .container {
+    height: auto;
+  }
+}
+
+@media (max-width: 1800px) and (min-width: 1000px) {
+  body {
+    /*background-image: url('http://farm4.staticflickr.com/3821/11011233373_96bd01daf9_o.jpg');*/
+    background-image: url('http://farm3.staticflickr.com/2855/10982386274_b5157607ed_h.jpg');
+  }
+}
+
+.jumbotron {
+  background-color: rgb(238, 238, 238);
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+.people-already-anwser {
+  margin: 30px 0 0 0;
+}
