@@ -28,7 +28,11 @@ body {
 
 @media (max-width: 1800px) and (min-width: 1000px) {
   body {
-    /*background-image: url('http://farm4.staticflickr.com/3821/11011233373_96bd01daf9_o.jpg');*/
+    /*
+    http://www.flickr.com/photos/150hp/11011233373/sizes/l/
+    background-image: url('http://farm4.staticflickr.com/3821/11011233373_96bd01daf9_o.jpg');*/
+
+    /* http://www.flickr.com/photos/109423104@N04/10982386274/sizes/h/ */
     background-image: url('http://farm3.staticflickr.com/2855/10982386274_b5157607ed_h.jpg');
   }
 }
