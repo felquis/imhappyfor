@@ -2,7 +2,7 @@ extends layout
 
 block content
   .row
-    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+    nav.navbar.navbar-default(role='navigation')
       button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='ul.nav.navbar-nav')
         span.sr-only Toggle navigation
         span.icon-bar
@@ -23,7 +23,7 @@ block content
         tr
           // td.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1.col-sm-12.col-xs-12
           td
-            form#intro-form.jumbotron.intro-form.col-xs-12(role='form' method='post')
+            form#intro-form.intro-form.col-xs-12(role='form')
               .row
                 .col-xs-12
                   .form-group.first-step.form-inline
@@ -40,26 +40,6 @@ block content
 
                 .col-xs-12
                   .form-group.col-xs-12.second-step
-                    span.h2.
-                      Good to know that <span class="second-step-answer"></span> makes you happy! =D <br>
-
-                    span.h3 Share your happiness and tell your friends to answer too
-
-                    .share-block
-                        a.facebook.button(target='_blank')
-                          i.icon
-                            i.fa.fa-facebook
-                          .slide
-                            p facebook
-
-                        a.twitter.button(target='_blank')
-                          i.icon
-                            i.fa.fa-twitter
-                          .slide
-                            p twitter
-
-                .col-xs-12
-                  .form-group.col-xs-12.third-step
                     .h2 Tell us more about your answer
 
                     .h3 It was about:
@@ -81,8 +61,6 @@ block content
                     .radio
                       label Feeling (Something not physical)
                         input(type='radio' name='answerCategory' id='optionsRadios4' value='feelings')
-
-                    input.btn.btn-success.btn-lg(type='submit' value='Save and see the result')
 
               .row
                 p.text-center.people-already-anwser.
