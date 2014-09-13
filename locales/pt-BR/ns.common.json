@@ -1,0 +1,11 @@
+{
+  "app": {
+    "hello": "Olá!!"
+  },
+  "menu": {
+    "home": "Inicio",
+    "what_is_this": "O que é isso?",
+    "who_did_this": "Quem fez isso?",
+    "get_in_touch": "Entre em contato"
+  }
+}

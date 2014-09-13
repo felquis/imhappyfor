@@ -8,6 +8,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
+var i18next = require('i18next');
+
+i18next.init({
+  ns: { namespaces: ['ns.common'], defaultNs: 'ns.common'},
+  resSetPath: 'locales/__lng__/__ns__.json',
+  saveMissing: true,
+  sendMissingTo: 'all',
+  debug: true,
+  fallbackLng: 'en'
+})
 
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
@@ -23,6 +33,8 @@ module.exports = function(app, config) {
   app.use(compress());
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
+  app.use(i18next.handle);
+  i18next.registerAppHelper(app);
 
   var controllersPath = path.join(__dirname, '../app/controllers');
   fs.readdirSync(controllersPath).forEach(function (file) {
