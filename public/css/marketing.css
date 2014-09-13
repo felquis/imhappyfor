@@ -131,7 +131,8 @@ a.pure-button-primary {
  */
 
  .splash-container {
-  background: #1f8dd6;
+  background-image: url('/img/happy-001.jpg');
+  background-size: cover;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -234,20 +235,6 @@ a.pure-button-primary {
   .content {
     padding: 1em;
   }
-
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
-    .home-menu {
-      text-align: left;
-    }
-    .home-menu ul {
-      float: right;
-    }
-
-    /* We increase the height of the splash-container */
-/*    .splash-container {
-        height: 500px;
-        }*/
 
     /* We decrease the width of the .splash, since we have more width
     to work with */
