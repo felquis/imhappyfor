@@ -5,7 +5,12 @@ var fs = require('fs'),
   config = require('../../config/config'),
   db = {};
 
-var sequelize = new Sequelize(config.db);
+// var sequelize = new Sequelize(config.db);
+
+var sequelize = new Sequelize(config.db.dbname, config.db.user, config.db.password, {
+  host: config.db.host,
+  port: config.db.port
+})
 
 fs.readdirSync(__dirname).filter(function (file) {
   return (file.indexOf('.') !== 0) && (file !== 'index.js');
