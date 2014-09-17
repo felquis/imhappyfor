@@ -86,9 +86,8 @@ h6 {
 }
 
 .pure-button.inline-button {
-  display: inline-block;
   padding: 0 0.5em;
-  margin: 0 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .pure-form .inline-button {
@@ -98,23 +97,6 @@ h6 {
 .splash-align {
   display: flex;
   justify-content: center;
-}
-
-/*
- * -- PURE BUTTON STYLES --
- * I want my pure-button elements to look a little different
- */
- .pure-button {
-  background-color: #1f8dd6;
-  color: white;
-  border-radius: 5px;
-}
-
-a.pure-button-primary {
-  background: white;
-  color: #1f8dd6;
-  border-radius: 5px;
-  font-size: 120%;
 }
 
 
