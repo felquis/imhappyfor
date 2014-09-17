@@ -19,8 +19,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-label {
+h6 {
   color: #34495e;
 }
 
@@ -52,18 +51,53 @@ label {
  * -- PURE FORM STYLES --
  * Style the form inputs and labels
  */
- .pure-form label {
-  margin: 1em 0 0;
-  font-weight: bold;
+.pure-form.splash-form-align {
+
+}
+
+.splash-input-align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pure-form label {
   font-size: 100%;
 }
 
-.pure-form input[type] {
-  border: 2px solid #ddd;
-  box-shadow: none;
-  font-size: 100%;
-  width: 100%;
-  margin-bottom: 1em;
+.pure-form label.inline-label {
+  margin: 0 0 0 0;
+  padding: 0;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.pure-form label.inline-label.input {
+  margin-top: 0;
+  border: 2px dashed #DDD;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  text-align: left;
+  margin: 0 0 0 0.5em;
+  flex: auto;
+}
+.pure-form label.inline-label.input:focus {
+  outline: none;
+}
+
+.pure-button.inline-button {
+  display: inline-block;
+  padding: 0 0.5em;
+  margin: 0 0 0 0;
+}
+
+.pure-form .inline-button {
+
+}
+
+.splash-align {
+  display: flex;
+  justify-content: center;
 }
 
 /*
@@ -73,7 +107,6 @@ label {
  .pure-button {
   background-color: #1f8dd6;
   color: white;
-  padding: 0.5em 2em;
   border-radius: 5px;
 }
 
@@ -94,7 +127,8 @@ a.pure-button-primary {
   padding: 0.5em;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
-.home-menu.pure-menu-open {
+.home-menu.pure-menu-open,
+.footer {
   background: #2d3e50;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
@@ -151,7 +185,6 @@ a.pure-button-primary {
   position: absolute;
   top: 100px; left: 0; bottom: 0; right: 0;
   text-align: center;
-  text-transform: uppercase;
 }
 
 /* This is the main heading that appears on the blue section */
@@ -171,6 +204,7 @@ a.pure-button-primary {
   color: white;
   letter-spacing: 0.05em;
   opacity: 0.8;
+  font-size: 1.7em;
 }
 
 /*
@@ -215,11 +249,6 @@ a.pure-button-primary {
   color: #aaa;
 }
 
-/* This is the class used for the footer */
-.footer {
-  background: #111;
-}
-
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -235,18 +264,6 @@ a.pure-button-primary {
   .content {
     padding: 1em;
   }
-
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    .splash {
-      width: 50%;
-      height: 50%;
-    }
-
-    .splash-head {
-      font-size: 250%;
-    }
-
 
     /* We remove the border-separator assigned to .l-box-lrg */
     .l-box-lrg {
@@ -265,4 +282,8 @@ a.pure-button-primary {
   .splash-head {
     font-size: 300%;
   }
+}
+
+@media all and (max-width: 492px) {
+
 }

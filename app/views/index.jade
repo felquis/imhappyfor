@@ -18,72 +18,25 @@ block content
           a(href='?setLng=pt-BR') Português
   .splash-container
     .splash
-      h1.splash-head= t('ns.common:app.hello')
       p.splash-subhead
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      p
-        a.pure-button.pure-button-primary(href='http://purecss.io') Get Started
+        | We want to know, what makes you happy? :D
+      div.splash-head
+        form.pure-form.splash-form-align
+          .pure-g
+            label.inline-label I'm happy for
+            label.inline-label.input(contenteditable)
+
+          .pure-g
+            button.pure-button.inline-button(type='submit') Send Answer!
   .content-wrapper
     .content
-      h2.content-head.is-center Excepteur sint occaecat cupidatat.
-      .pure-g
-        .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4
-          h3.content-subhead
-            i.fa.fa-rocket
-            | Get Started Quickly
+      .pure-g.l-box-lrg
+        .l-box-lrg.is-center.pure-u-1.pure-u-md-1-2.pure-u-lg-2-5
+          // img.pure-img-responsive(alt='File Icons', width='300', src='img/common/file-icons.png')
+        .pure-u-1.pure-u-md-1-2.pure-u-lg-3-5
+          // h2.content-head Laboris nisi ut aliquip.
           p
-            | Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-        .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4
-          h3.content-subhead
-            i.fa.fa-mobile
-            | Responsive Layouts
-          p
-            | Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-        .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4
-          h3.content-subhead
-            i.fa.fa-th-large
-            | Modular
-          p
-            | Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-        .l-box.pure-u-1.pure-u-md-1-2.pure-u-lg-1-4
-          h3.content-subhead
-            i.fa.fa-check-square-o
-            | Plays Nice
-          p
-            | Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-    .ribbon.l-box-lrg.pure-g
-      .l-box-lrg.is-center.pure-u-1.pure-u-md-1-2.pure-u-lg-2-5
-        // img.pure-img-responsive(alt='File Icons', width='300', src='img/common/file-icons.png')
-      .pure-u-1.pure-u-md-1-2.pure-u-lg-3-5
-        h2.content-head.content-head-ribbon Laboris nisi ut aliquip.
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          | consequat. Duis aute irure dolor.
-    .content
-      h2.content-head.is-center Dolore magna aliqua. Uis aute irure.
-      .pure-g
-        .l-box-lrg.pure-u-1.pure-u-md-2-5
-          form.pure-form.pure-form-stacked
-            fieldset
-              label(for='name') Your Name
-              input#name(type='text', placeholder='Your Name')
-              label(for='email') Your Email
-              input#email(type='email', placeholder='Your Email')
-              label(for='password') Your Password
-              input#password(type='password', placeholder='Your Password')
-              button.pure-button(type='submit') Sign Up
-        .l-box-lrg.pure-u-1.pure-u-md-3-5
-          h4 Contact Us
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            | consequat.
-          h4 More Information
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua.
+            | This is a non-profit project for people who wants to share there happiness and ther gratetute. Please participate.
+            | We won't collect any info from you and all the resposts are anonimys.
+
     .footer.l-box.is-center
-      | View the source of this layout to learn more. Made with love by the YUI Team.
