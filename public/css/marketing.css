@@ -14,6 +14,10 @@
   font-size: 13px;
 }
 
+body, html {
+  height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -77,11 +81,29 @@ h6 {
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-  text-align: left;
   margin: 0 0 0 0.5em;
-  flex: auto;
+  flex: 1;
+  width: 100%;
+  white-space: nowrap;
+  text-align: start;
+  overflow: hidden;
 }
-.pure-form label.inline-label.input:focus {
+
+.input-inner-editor {
+  display: block;
+  margin: 0;
+}
+
+.input-inner-editor * {
+  display: inline !important;
+}
+
+.input-inner-editor br {
+  display: none !important;
+}
+
+.pure-form label.inline-label.input:focus,
+.input-inner-editor:focus {
   outline: none;
 }
 
@@ -148,6 +170,8 @@ h6 {
 
  .splash-container {
   background-image: url('/img/happy-001.jpg');
+  /*background-attachment: fixed !important;*/
+  background-position: 0 0;
   background-size: cover;
   z-index: 1;
   overflow: hidden;
@@ -259,7 +283,14 @@ h6 {
  * On desktops and other large devices, we want to over-ride some
  * of the mobile and tablet styles.
  */
- @media (min-width: 78em) {
+
+@media all and (min-width: 817px) {
+  .splash-head {
+    font-size: 200%;
+  }
+}
+
+@media (min-width: 78em) {
   /* We increase the header font size even more */
   .splash-head {
     font-size: 300%;
@@ -267,5 +298,21 @@ h6 {
 }
 
 @media all and (max-width: 492px) {
+  .splash-align {
+    display: block;
+  }
 
+  .splash-container {
+    position: relative !important;
+  }
+
+  .pure-form label.inline-label.input {
+    flex: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .pure-form label.inline-label {
+    text-align: left;
+  }
 }
