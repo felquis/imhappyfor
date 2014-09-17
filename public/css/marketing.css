@@ -14,10 +14,6 @@
   font-size: 13px;
 }
 
-body, html {
-  height: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -170,17 +166,16 @@ h6 {
 
  .splash-container {
   background-image: url('/img/happy-001.jpg');
-  /*background-attachment: fixed !important;*/
-  background-position: 0 0;
+  background-position: center;
   background-size: cover;
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
   width: 100%;
-  height: 88%;
+  height: auto;
   top: 0;
   left: 0;
-  position: fixed !important;
+  position: relative;
 }
 
 .splash {
@@ -188,8 +183,9 @@ h6 {
   width: 80%;
   height: 50%;
   margin: auto;
-  position: absolute;
-  top: 100px; left: 0; bottom: 0; right: 0;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  position: relative;
   text-align: center;
 }
 
@@ -220,7 +216,7 @@ h6 {
  .content-wrapper {
   /* These styles are required for the "scroll-over" effect */
   position: absolute;
-  top: 87%;
+  /*top: 87%;*/
   width: 100%;
   min-height: 12%;
   z-index: 2;
@@ -252,7 +248,7 @@ h6 {
 /* This is the class used for the dark-background areas. */
 .ribbon {
   background: #2d3e50;
-  color: #aaa;
+  color: #fff;
 }
 
 /*
@@ -302,10 +298,6 @@ h6 {
     display: block;
   }
 
-  .splash-container {
-    position: relative !important;
-  }
-
   .pure-form label.inline-label.input {
     flex: none;
     width: 100%;
@@ -314,5 +306,11 @@ h6 {
 
   .pure-form label.inline-label {
     text-align: left;
+  }
+}
+
+@media all and (max-width: 855px) {
+  .splash-container {
+    position: relative !important;
   }
 }
