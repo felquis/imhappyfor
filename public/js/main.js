@@ -49,6 +49,10 @@
     var splash = $('.splash'),
         splashContainer = $('.splash-container');
 
+    $('html, body').animate({
+      scrollTop: 0
+    });
+
     splash.jAnimate('flipOutX', function (element) {
 
       splash.addClass('step-2').removeClass('step-1');
