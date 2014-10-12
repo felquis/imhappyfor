@@ -55,7 +55,53 @@
 
       subhead.text(subhead.data('success-text').replace(/({{answer}})/ig, data.answer));
 
+      prepareShareUrl(data);
+
       splash.jAnimate('flipInX');
     });
   }
+
+  var prepareShareUrl = function (data) {
+    var url, shareText;
+
+    $('.share-popup').each(function (index, element) {
+
+      url = $(element).attr('href'),
+      shareText = $(element).data('share-text');
+
+      url = url.replace(/({{url}})/ig, encodeURIComponent('http://' + location.host + '/'));
+
+      if(shareText) {
+        shareText = encodeURIComponent(shareText.replace(/({{answer}})/ig, data.answer));
+      }
+
+      url = url.replace(/({{share_text}})/ig, shareText);
+
+      console.log(url);
+
+      $(element).attr('href', url);
+
+    });
+  }
+
+  $('.share-popup').click(function(){
+    var window_size = '';
+    var url = this.href;
+    var domain = url.split("/")[2];
+    switch(domain) {
+        case "www.facebook.com":
+            window_size = "width=585,height=368";
+            break;
+        case "www.twitter.com":
+            window_size = "width=585,height=261";
+            break;
+        case "plus.google.com":
+            window_size = "width=517,height=511";
+            break;
+        default:
+            window_size = "width=585,height=511";
+    }
+    window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,' + window_size);
+    return false;
+  });
 }());
