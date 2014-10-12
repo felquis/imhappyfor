@@ -188,8 +188,6 @@ h6 {
  */
 
  .splash-container {
-  background-image: url('/img/happy-001.jpg');
-  background-position: center left;
   background-size: cover;
   z-index: 1;
   overflow: hidden;
@@ -200,6 +198,31 @@ h6 {
   left: 0;
   position: relative;
 }
+
+ .splash-01 {
+  background-image: url('/img/happy-001.jpg');
+  background-position: center left;
+ }
+
+ .splash-02 {
+  background-image: url('/img/happy-002.jpg');
+  background-position: center left;
+ }
+
+ .splash-03 {
+  background-image: url('/img/happy-003.jpg');
+  background-position: center left;
+ }
+
+ .splash-04 {
+  background-image: url('/img/happy-004.jpg');
+  background-position: center left;
+ }
+
+ .splash-05 {
+  background-image: url('/img/happy-005.jpg');
+  background-position: center left;
+ }
 
 .splash {
   /* absolute center .splash within .splash-container */

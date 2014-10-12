@@ -2,12 +2,14 @@
   'use strict';
 
   var sendingForm = false;
+  var bgNumber = Math.floor((Math.random() * 5) + 1);
+  $('.splash-container').addClass('splash-0' + bgNumber);
 
   $('#send-form').on('submit', function (e) {
     e.preventDefault();
 
     var answer = $('#send-answer').text(),
-        background = $('.splash-container').css('background-image').replace(/.*(\d{3}).jpg.*/, '$1');
+        background = !bgNumber ? $('.splash-container').css('background-image').replace(/.*(\d{3}).jpg.*/, '$1') : bgNumber;
 
     if (answer.length < 3 || sendingForm) {
       return false;
