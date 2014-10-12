@@ -224,6 +224,10 @@ h6 {
   background-position: center left;
  }
 
+.splash-02 .splash-subhead, .splash-02 .splash-head {
+  color: #7f8c8d;
+}
+
 .splash {
   /* absolute center .splash within .splash-container */
   width: 80%;
