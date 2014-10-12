@@ -1,6 +1,11 @@
 {
     "app": {
-        "hello": "Hi!!"
+        "hello": "Hi!!",
+        "call_to_action": "Share what makes you happy",
+        "phrase": "I'm happy for",
+        "what_is_this": "This is a non-profit project for people who wants to share there happiness and ther gratetute. Please participate. We won't collect any info from you and all the resposts are anonimys.",
+        "people_already_anwser": "__total__ people already anwser what they are happy for",
+        "send_button": "Send Answer!"
     },
     "menu": {
         "home": "home",

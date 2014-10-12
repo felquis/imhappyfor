@@ -12,31 +12,31 @@ block content
           a(href='/who')= t('ns.common:menu.who_did_this')
         li
           a(href='/touch')= t('ns.common:menu.get_in_touch')
-        li
-          a(href='?setLng=en') English
-        li
-          a(href='?setLng=pt-BR') Português
+        //li a(href='?setLng=en') English
+        //li a(href='?setLng=pt-BR') Português
   .splash-container
-    .splash
-      p.splash-subhead
-        | We want to know, what makes you happy? :D
+    .splash.step-1
+      p.splash-subhead= t('ns.common:app.call_to_action')
       div.splash-head
-        form.pure-form.splash-form-align
+        form#send-form.pure-form.splash-form-align
           .splash-align
-            label.inline-label I'm happy for
+            label.inline-label= t('ns.common:app.phrase')
             label.inline-label.input
-              p.input-inner-editor(contenteditable)
+              p#send-answer.input-inner-editor(contenteditable)
 
           .pure-g.splash-align
-            button.button-large.pure-button-primary.pure-button.inline-button(type='submit') Send Answer!
+            button.button-large.pure-button-primary.pure-button.inline-button(type='submit')= t('ns.common:app.send_button')
+
+  .splash.step-2
+      p.splash-subhead= t('ns.common:app.done', {})
+      div.splash-head
+        | Heee
+
   .content-wrapper
     .content.ribbon
       .pure-g.l-box-lrg
         .pure-u-1.pure-u-md-1-2.pure-u-lg-3-5
-          p
-            | This is a non-profit project for people who wants to share there happiness and ther gratetute. Please participate.
-            | We won't collect any info from you and all the resposts are anonimys.
+          p= t('ns.common:app.what_is_this')
 
     .l-box.is-center
-      p
-        | 1300 people already anwser what they are happy for
+      p= t('ns.common:app.people_already_anwser', { total: answersNumber })

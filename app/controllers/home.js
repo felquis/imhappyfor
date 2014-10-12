@@ -7,11 +7,9 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-
-  db.Article.findAll().success(function (articles) {
+  db.Answers.count().success(function(count) {
     res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
+      answersNumber: count
     });
-  });
+  })
 });
