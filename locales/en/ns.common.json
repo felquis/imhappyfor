@@ -5,7 +5,10 @@
         "phrase": "I'm happy for",
         "what_is_this": "This is a non-profit project for people who wants to share there happiness and ther gratetute. Please participate. We won't collect any info from you and all the resposts are anonimys.",
         "people_already_anwser": "__total__ people already anwser what they are happy for",
-        "send_button": "Send Answer!"
+        "send_button": "Send Answer!",
+        "sending_button": "Sending :D",
+        "good_to_know": "Good to know that {{answer}} makes you happy! =D",
+        "share_your_happiness": "Share your happiness and tell your friends to answer too"
     },
     "menu": {
         "home": "home",

@@ -21,7 +21,13 @@ router.post('/save', function (req, res, next) {
     text: req.body.text,
     bg: req.body.bg,
     locale: req.locale
-  }).success(function(a, b, c) {
-    res.json({success: true});
+  }).success(function(data, b, c) {
+
+    console.log(data.dataValues);
+
+    res.json({
+      success: true,
+      answer: data.dataValues.text
+    });
   })
 });
