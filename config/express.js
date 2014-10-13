@@ -31,7 +31,8 @@ module.exports = function(app, config) {
   }));
   app.use(cookieParser());
   app.use(compress());
-  app.use(express.static(config.root + '/public'));
+  // 48 hours = 172800 seconds 
+  app.use(express.static(config.root + '/public', { maxAge: 172800}));
   app.use(methodOverride());
   app.use(i18next.handle);
   i18next.registerAppHelper(app);
