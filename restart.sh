@@ -1,6 +1,4 @@
-git stash clear
-git stash
+git reset --hard
 git pull origin master
-npm instal
-bower instal --allow-root
-git stash apply
+npm install
+bower install --allow-root
