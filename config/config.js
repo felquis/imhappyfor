@@ -11,7 +11,7 @@ var config = {
     port: 3000,
     db: {
       host: 'localhost',
-      port: '8889',
+      port: '3306',
       dbname: 'imhappyforcom',
       user: 'root',
       password: 'root'
@@ -35,14 +35,7 @@ var config = {
       name: ''
     },
     port: 3000,
-    db: {
-      host: '127.0.0.1',
-      port: '',
-      dbname: '',
-      user: '',
-      password: ''
-    }
-
+    db: process.env.MYSQL_ENV || 'mysql://localhost/imhappyforcom-prod'
   }
 };
 
