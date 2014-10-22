@@ -2,6 +2,8 @@ var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
+console.log(process.env.NODE_ENV);
+
 var config = {
   development: {
     root: rootPath,
@@ -10,11 +12,11 @@ var config = {
     },
     port: 3000,
     db: {
-      host: 'localhost',
-      port: '3306',
-      dbname: 'imhappyforcom',
-      user: 'root',
-      password: 'root'
+      host: process.env.MYSQL_HOST,
+      port: process.env.MYSQL_PORT,
+      dbname: process.env.MYSQL_DBNAME,
+      user: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD
     }
 
   },
@@ -35,7 +37,13 @@ var config = {
       name: ''
     },
     port: 3000,
-    db: process.env.MYSQL_ENV || 'mysql://localhost/imhappyforcom-prod'
+    db: {
+      host: process.env.MYSQL_HOST,
+      port: process.env.MYSQL_PORT,
+      dbname: process.env.MYSQL_DBNAME,
+      user: process.env.MYSQL_USER,
+      password: process.env.MYSQL_PASSWORD
+    }
   }
 };
 
