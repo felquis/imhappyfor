@@ -6,6 +6,32 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
+var saveEachWord = function (word, obj) {
+
+  db.DetailAnswers.find({
+    where: {
+      text: word,
+      locale: obj.locale
+    },
+  }).success(function (data) {
+    if (data) {
+      // Quando encontra algo, atualiza o número
+      data.updateAttributes({
+        number: data.dataValues.number + 1
+      });
+    } else {
+      // Quando não encontra nada, cria um novo
+      db.DetailAnswers.create({
+        text: word,
+        locale: obj.locale,
+        number: 1
+      });
+    }
+  }).error(function (data) {
+    console.log('error: ', data);
+  })
+}
+
 router.post('/save', function (req, res, next) {
 
   if (req.body.text.length < 3) {
@@ -23,7 +49,9 @@ router.post('/save', function (req, res, next) {
     locale: req.locale
   }).success(function(data, b, c) {
 
-    console.log(data.dataValues);
+    data.dataValues.text.split(' ').forEach(function (word) {
+      saveEachWord(word, data.dataValues);
+    });
 
     res.json({
       success: true,
