@@ -9,8 +9,7 @@
     },
     "menu": {
         "home": "home",
-        "what_is_this": "What is this?",
-        "who_did_this": "Who did this?",
+        "about": "About",
         "get_in_touch": "Get in Touch"
     }
 }

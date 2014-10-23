@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .header
+    .home-menu.pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+      ul
+        li
+          a(href='/')= t('ns.common:menu.home')
+        li.pure-menu-selected
+          a(href='/what')= t('ns.common:menu.about')
+        //- li
+        //-   a(href='?setLng=en') English
+        //- li
+        //-   a(href='?setLng=pt-BR') Português
+  //- .splash-container
+  //-   .splash
+  //-     h1.splash-head= t('ns.common:app.hello')
+  //-     p.splash-subhead
+  //-       | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  //-     p
+  //-       a.pure-button.pure-button-primary(href='http://purecss.io') Get Started
+  .content-wrapper
+    .content
+      .pure-g.l-box-lrg
+        .pure-u-1.pure-u-md-1-2.pure-u-lg-3-5
+          p= t('ns.common:app.what_is_this')
+    .footer.l-box.is-center
+      | View the source of this layout to learn more. Made with love by the YUI Team.
